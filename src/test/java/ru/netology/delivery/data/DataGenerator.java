@@ -14,8 +14,8 @@ public class DataGenerator {
     public static String generateDate(int shift) {
         // TODO: добавить логику для объявления переменной date и задания её значения, для генерации строки с датой
         // Вы можете использовать класс LocalDate и его методы для получения и форматирования даты
-        String date = LocalDate.now().plusDays(shift).format(DateTimeFormatter.ofPattern("dd.MM.yyyy"));
-        return date;
+//
+        return LocalDate.now().plusDays(shift).format(DateTimeFormatter.ofPattern("dd.MM.yyyy"));
     }
 
     public static String generateCity(String locale) {
@@ -59,8 +59,7 @@ public class DataGenerator {
         public static UserInfo generateUser(String locale) {
             // TODO: добавить логику для создания пользователя user с использованием методов generateCity(locale),
             // generateName(locale), generatePhone(locale)
-            UserInfo user = new UserInfo(generateCity(locale), generateName(locale), generatePhone(locale));
-            return user;
+            return new UserInfo(generateCity(locale), generateName(locale), generatePhone(locale));
         }
     }
 
