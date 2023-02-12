@@ -52,6 +52,11 @@ public class DataGenerator {
         return phone;
     }
 
+    public static String generateWrongPhone(String locale) {
+        Faker faker = new Faker(new Locale(locale));
+        return faker.phoneNumber().cellPhone();
+    }
+
     public static class Registration {
         private Registration() {
         }
